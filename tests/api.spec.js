@@ -50,17 +50,17 @@ describe("API Tests", () => {
       });
   });
   it("Get Specific Issue", (done) => {
-    appServer.get("/api/v1/issues/1").end((err, res) => {
+    appServer.get("/api/v1/issues/34").end((err, res) => {
       expect(res).to.have.status(200);
       expect(res.body).to.have.lengthOf(1);
       expect(res.body[0].snowids).to.eql(["1", "2", "3"]);
-      expect(res.body[0].date_reported).to.eql("2021-07-09T01:01:55+00:00");
+      expect(res.body[0].date_reported).to.eql("2021-07-09T05:01:55+00:00");
       expect(res.body[0].status).to.eql("Open");
       expect(res.body[0].category).to.eql("General");
       expect(res.body[0].description).to.eql(
         "User Information, such as email address and last name, on the My Profile page cannot be updated. User has already updated Profile information in HARP."
       );
-      expect(res.body[0].date_resolved).to.eql("2021-07-09T01:01:55+00:00");
+      expect(res.body[0].date_resolved).to.eql("2021-07-09T05:01:55+00:00");
       expect(res.body[0].provider_types).to.eql(["HHA", "IRF", "LTCH"]);
       done();
     });

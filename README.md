@@ -51,3 +51,7 @@ Request Body example:
   "provider_types": ["HHA", "IRF", "LTCH"]
 }
 ```
+
+### Cleanup
+
+`npm run cleanup`
