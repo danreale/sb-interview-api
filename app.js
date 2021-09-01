@@ -36,7 +36,7 @@ app.get("/api/v1/issues/:id", async (req, res) => {
       .select("*")
       .eq("id", req.params.id);
     if (error) {
-      res.send({ message: "Query Error" });
+      res.send(error);
     } else {
       if (issues.length == 0) {
         res.send({ message: "No Matching Issues" });
@@ -64,7 +64,7 @@ app.post("/api/v1/issues", async (req, res) => {
       },
     ]);
     if (error) {
-      res.send({ message: "Query Error" });
+      res.send(error);
     } else {
       res.send(data);
     }
@@ -89,7 +89,7 @@ app.put("/api/v1/issues/:id", async (req, res) => {
       })
       .eq("id", req.params.id);
     if (error) {
-      res.send({ message: "Query Error" });
+      res.send(error);
     } else {
       res.send(data);
     }
@@ -109,7 +109,7 @@ async function getAllIssuesNoFilter(res) {
   try {
     let { data: issues, error } = await supabase.from("issues").select("*");
     if (error) {
-      res.send({ message: "Query Error" });
+      res.send(error);
     } else {
       if (issues.length == 0) {
         res.send({ message: "No Matching Issues" });
@@ -129,7 +129,7 @@ async function getAllIssuesByStatus(req, res) {
       .select("*")
       .eq("status", req.query.status);
     if (error) {
-      res.send({ message: "Query Error" });
+      res.send(error);
     } else {
       if (issues.length == 0) {
         res.send({ message: "No Matching Issues" });
@@ -149,7 +149,7 @@ async function getAllIssuesByCategory(req, res) {
       .select("*")
       .eq("category", req.query.category);
     if (error) {
-      res.send({ message: "Query Error" });
+      res.send(error);
     } else {
       if (issues.length == 0) {
         res.send({ message: "No Matching Issues" });
@@ -170,7 +170,7 @@ async function getAllIssuesByStatusAndCategory(req, res) {
       .eq("status", req.query.status)
       .eq("category", req.query.category);
     if (error) {
-      res.send({ message: "Query Error" });
+      res.send(error);
     } else {
       if (issues.length == 0) {
         res.send({ message: "No Matching Issues" });
