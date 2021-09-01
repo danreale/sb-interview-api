@@ -10,7 +10,9 @@ Open terminal and run:
 
 ### Running the API
 
-Before starting the api, please add a `.env` file at the root of this project with the contents sent to you in the setup instructions from HR.
+Before starting the api, please add a `.env` file at the root of this project with the contents sent to you in the setup instructions from HR. To create a .env file do the following:
+Mac OS - Open Terminal, navigate to the root of the project, type 'touch .env' into Terminal and then press the Enter key. In order to verify that the .env file has been created you will have to view hidden files. To view hidden files on a Mac, navigate to the root of the project and press 'Command + Shift + .' and you should see your .env file there.
+Windows OS - Open Notepad or Notepad++, add the information to the .env file as sent to you in your preparation email, click File -> Save As, select All Files, name the file '.env' and save the .env file to the root of the project folder.
 
 `npm run start`
 
