@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha ./tests/**/*.spec.js --timeout=60000 --exit",
     "start": "node app.js",
-    "cleanup": "node scripts/cleanup.js"
+    "cleanup": "node scripts/cleanup.js",
+    "cypress:open": "cypress open"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
+    "cypress": "^9.2.0",
     "mocha": "^9.0.2"
   },
   "dependencies": {
