@@ -57,3 +57,16 @@ Request Body example:
 ### Cleanup
 
 `npm run cleanup`
+
+## Manual Testing Challenge
+
+Based on this sample feature, please read the requirements and build out a manual test plan. Please have your test plan prepared prior to the interview. The team will ask that your share your screen and showcase the plan.
+
+Requirements:
+
+- Zip files can be uploaded for each Provider Type (LTCH, IRF, HHA, MDS)
+- Zip files can contain as many xml assessments less than or equal to 5mb.
+- Zip file format is the only format accepted.
+- After a file is uploaded and processed, the user should be able to review the report whether the file is accepted or rejected.
+
+[Mockup](mockup.png)
