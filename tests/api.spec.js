@@ -115,4 +115,6 @@ describe("API Tests", () => {
         done();
       });
   });
+  // TODO: Add test for Delete Issue functionality.
+  // NOTE: Can use issue id 125
 });

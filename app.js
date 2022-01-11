@@ -99,6 +99,23 @@ app.put("/api/v1/issues/:id", async (req, res) => {
   }
 });
 
+app.delete("/api/v1/issues/:id", async (req, res) => {
+  try {
+    const { data, error } = await supabase
+      .from("issues")
+      .delete()
+      .eq("id", req.params.id);
+    if (error) {
+      res.send(error);
+    } else {
+      res.send(data);
+    }
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+});
+
 app.listen(port, function () {
   console.log("Running API on Port " + port);
 });
